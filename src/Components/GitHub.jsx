@@ -21,10 +21,10 @@ function GitHub() {
 
   return (
     <>
-    {gitData ? <div className="h-screen flex gap-x-10 max-lg:flex-col max-sm:px-3 max-lg:px-8 justify-evenly items-center text-lg leading-10">
+    {gitData ? <div className="h-screen flex gap-x-10 max-lg:flex-col max-sm:px-3 dark:bg-gray-900 max-lg:px-8 justify-evenly items-center text-lg leading-10">
       <img className="max-xl:h-1/2 max-lg:h-2/5 max-md:h-1/3 w-auto object-cover rounded-full" src={gitData.avatar_url} alt="" />
-      <div className="w-1/2 max-lg:w-full">
-        <h1><span className="font-semibold pr-2 capitalize">Name:</span>{gitData.name}</h1>
+      <div className="w-1/2 max-lg:w-full dark:text-white">
+        <h1><span className="font-semibold pr-2 capitalize ">Name:</span>{gitData.name}</h1>
         <p><span className="font-semibold pr-2 capitalize">Username:</span>{gitData.login}</p>
         <p><span className="font-semibold pr-2 capitalize">Bio:</span>{gitData.bio}</p>
         <div className="flex gap-x-4 max-sm:gap-x-1">

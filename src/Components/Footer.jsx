@@ -2,7 +2,7 @@ import { Link, NavLink } from 'react-router-dom'
 import sunlogo from '../assets/sunlogo.jpeg'
 function Footer() {
   return (
-    <footer className="bg-white border-y">
+    <footer className="bg-white border-y dark:bg-gray-950">
     <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
@@ -14,12 +14,12 @@ function Footer() {
                     />
                 </Link>
             </div>
-            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 ">
                 <div>
-                    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
+                    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
                     <ul className="text-gray-500 font-medium">
                         <li className="mb-4">
-                            <NavLink to="/" className={({isActive})=>`hover:underline hover:text-orange-700 ${isActive ? "text-orange-600": "text-gray-500"}`}>
+                            <NavLink to="/" className={({isActive})=>`hover:underline hover:text-orange-700  ${isActive ? "text-orange-600": "text-gray-500"}`}>
                                 Home
                             </NavLink>
                         </li>
@@ -31,7 +31,7 @@ function Footer() {
                     </ul>
                 </div>
                 <div>
-                    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Follow us</h2>
+                    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
                     <ul className="text-gray-500 font-medium">
                         <li className="mb-4">
                             <Link
@@ -52,7 +52,7 @@ function Footer() {
                     </ul>
                 </div>
                 <div>
-                    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h2>
+                    <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
                     <ul className="text-gray-500 font-medium">
                         <li className="mb-4">
                             <Link to="#" className="hover:underline">
@@ -77,7 +77,7 @@ function Footer() {
                 </a>
                 . All Rights Reserved.
             </span>
-            <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+            <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0 ">
                 <Link to="#" className="text-gray-500 hover:text-gray-900">
                     <svg
                         className="w-4 h-4"
@@ -117,7 +117,7 @@ function Footer() {
                             clipRule="evenodd"
                         />
                     </svg>
-                    <span className="sr-only">Twitter page</span>
+                    <span className="sr-only dark:text-white">Twitter page</span>
                 </Link>
                 <Link to="#" className="text-gray-500">
                     <svg

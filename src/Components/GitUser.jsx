@@ -5,7 +5,7 @@ function GitUser() {
     const {userId} = useParams()
 
   return (
-    <div className="py-28 text-center">
+    <div className="py-28 text-center dark:bg-gray-900">
       <p className="text-2xl font-semibold capitalize">user Id is: <span className="text-emerald-900 text-3xl">{userId}</span></p>
     </div>
   )

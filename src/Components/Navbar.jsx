@@ -1,11 +1,26 @@
 /* import { Link } from "react-router-dom"; */
 import { Link, NavLink } from 'react-router-dom'
 import sunlogo from '../assets/sunlogo.jpeg'
+import {useMyContext} from '../MyContact.js'
 
 function Navbar() {
+
+    const { myTheme, lightMode, darkMode } = useMyContext();
+
+  const changeMode = () => {
+    if (myTheme == "light") {
+      darkMode();
+    } else {
+      lightMode();
+    }
+  }
+ 
+
   return (
-    <header className="shadow-lg sticky z-50 top-0">
-            <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
+
+    <header className="shadow-lg sticky z-50 top-0 ">
+
+            <nav className="bg-white dark:bg-gray-950 border-gray-200 px-4 lg:px-6 py-2.5">
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                     <Link to="/" className="flex items-center">
                         <img
@@ -28,6 +43,13 @@ function Navbar() {
                             Get started
                         </Link>
                     </div>
+
+                    <label className="inline-flex items-center me-5 cursor-pointer">
+                        <input type="checkbox" value="" className="sr-only peer" onChange={changeMode} />
+                            <div className="relative w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-orange-300 dark:p eer-focus:ring-orange-800 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-orange-500"></div>
+                            <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">{myTheme == "light" ? "Light" : "Dark"}</span>
+                    </label>
+
                     <div
                         className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
                         id="mobile-menu-2"
@@ -77,9 +99,12 @@ function Navbar() {
                         </ul>
                     </div>
                 </div>
+               
+              
             </nav>
         </header>
-  )
-}
+)
+};
+
 
 export default Navbar
